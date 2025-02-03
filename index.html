@@ -17,48 +17,48 @@
     <form class="form" id="form"> 
       <div class="form-group first-name">
         <label for="first-name">First Name<span class="required">*</span></label>
-        <input type="text" id="first-name" name="first-name" required>
-        <p class="error-message" id="first-name-error">This field is required</p>
+        <input type="text" id="first-name" name="first-name" required aria-describedby="first-name-error">
+        <p class="error-message" id="first-name-error" aria-live="polite">This field is required</p>
       </div>
       <div class="form-group last-name">
         <label for="last-name">Last Name<span class="required">*</span></label>
-        <input type="text" id="last-name" name="last-name" required>
-        <p class="error-message" id="last-name-error">This field is required</p>
+        <input type="text" id="last-name" name="last-name" required aria-describedby="last-name-error">
+        <p class="error-message" id="last-name-error" aria-live="polite">This field is required</p>
       </div>
       <div class="form-group email">
         <label for="email">Email Address<span class="required">*</span></label>
-        <input type="email" id="email" name="email" required>
-        <p class="error-message" id="email-error">This field is required</p>
+        <input type="email" id="email" name="email" required aria-describedby="email-error">
+        <p class="error-message" id="email-error" aria-live="polite">This field is required</p>
       </div>
       <div class="form-group query-type">
         <fieldset>
           <legend>Query Type<span class="required">*</span></legend>
           <div class="form-group">
             <label class="radio-label" for="general">
-              <input type="radio" id="general" name="query-type" value="general" aria-labelledby="general-label" required>
-              <span id="general-label">General Enquiry</span>
+              <input type="radio" id="general" name="query-type" value="general" aria-labelledby="general-label" required aria-describedby="query-type-error">
+              General Enquiry
             </label>
           </div>
           <div class="form-group">
             <label class="radio-label" for="support">
-              <input type="radio" id="support" name="query-type" value="support" aria-labelledby="support-label" required>
-              <span id="support-label">Support Request</span>
+              <input type="radio" id="support" name="query-type" value="support" aria-labelledby="support-label" required aria-describedby="query-type-error">
+              Support Request
             </label>
           </div>
         </fieldset>
-        <p class="error-message" id="query-type-error">Please select a query type</p>
+        <p class="error-message" id="query-type-error" aria-live="polite">Please select a query type</p>
       </div>
       <div class="form-group message">
         <label for="message">Message<span class="required">*</span></label>
-        <textarea id="message" name="message" required></textarea>
-        <p class="error-message" id="message-error">This field is required</p>
+        <textarea id="message" name="message" required aria-describedby="message-error"></textarea>
+        <p class="error-message" id="message-error" aria-live="polite">This field is required</p>
       </div>
       <div class="form-group consent">
         <label for="consent" class="consent-label">
-          <input type="checkbox" id="consent" name="consent" required>
-          <span>I consent to being contacted by the team<span class="required">*</span></span>
+          <input type="checkbox" id="consent" name="consent" required aria-describedby="consent-error">
+          I consent to being contacted by the team<span class="required">*</span>
         </label>
-        <p class="error-message" id="consent-error">To submit this form, please consent to being contacted</p>
+        <p class="error-message" id="consent-error" aria-live="polite">To submit this form, please consent to being contacted</p>
       </div>
       <button type="submit">Submit</button>
     </form>
