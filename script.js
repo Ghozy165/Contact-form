@@ -81,14 +81,28 @@ document.addEventListener('DOMContentLoaded', () => {
         console.table(formValues); 
     }
 
+    const toast = document.getElementById('toast');
+    function successToast() {
+        setTimeout(() => {
+           toast.classList.add('show');
+        }, 1000);
+        setTimeout(() => {
+           toast.classList.remove('show');
+        }, 10000);
+    }
+
+   toast.addEventListener('click', () => {
+       toast.classList.remove('show');
+    });
+
     form.addEventListener('submit', (event) => {
         event.preventDefault();
         formValidate();
   
         if (isValid) {
-          sendForm();
-          form.reset();
-          alert("Thanks for completing the form. We'll be in touch soon!");
+            sendForm();
+            form.reset();
+            successToast();
         }
     });
   });

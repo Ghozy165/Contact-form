@@ -178,6 +178,40 @@ button {
     display: none;
 }
 
+.toast {
+    position: fixed;
+    top: 5%;
+    /* left: 50%; */
+    background-color: var(--grey-900);
+    color: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    z-index: 10;
+    gap: 1rem;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+.toast.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+.toast-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: "Karla Bold", sans-serif;
+}
+.toast > p {
+    color: var(--grey-500);
+}
+
+
 .attribution { 
     font-size: 1rem;
     text-align: center;
@@ -216,5 +250,6 @@ button {
     .container {
         min-width: 768px;
         padding: 3rem 2.5rem;
+        margin: 0;
     }
 }
