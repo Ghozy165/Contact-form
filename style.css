@@ -34,6 +34,7 @@ body {
     font-family: "Karla Regular", sans-serif;
     background-color: var(--green-200);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -177,6 +178,14 @@ button {
     display: none;
 }
 
+.attribution { 
+    font-size: 1rem;
+    text-align: center;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
 @media screen and (min-width: 768px) {
     .form {
         grid-template-columns: 1fr 1fr;
@@ -206,5 +215,6 @@ button {
 
     .container {
         min-width: 768px;
+        padding: 3rem 2.5rem;
     }
 }
