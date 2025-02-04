@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const firstName = document.getElementById('first-name');
         const firstNameParent = document.querySelector('.form-group.first-name');
-        if (firstName.value.trim() === '') {
+        if (!firstName.checkValidity()) {
           showError(firstNameParent, 'first-name-error');
         } else {
           hideError(firstNameParent, 'first-name-error');
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
         const lastName = document.getElementById('last-name');
         const lastNameParent = document.querySelector('.form-group.last-name');
-        if (lastName.value.trim() === '') {
+        if (!lastName.checkValidity()) {
           showError(lastNameParent, 'last-name-error');
         } else {
           hideError(lastNameParent, 'last-name-error');
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const emailParent = document.querySelector('.form-group.email');
         const emailError = document.getElementById('email-error');
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
-        if (email.value.trim() === '') {
+        if (!email.checkValidity()) {
           showError(emailParent, 'email-error');
           emailError.textContent = 'This field is required';
         } else if (!emailRegex.test(email.value)) {
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
         const message = document.getElementById('message');
         const messageParent = document.querySelector('.form-group.message');
-        if (message.value.trim() === '') {
+        if (!message.checkValidity()) {
           showError(messageParent, 'message-error');
         } else {
           hideError(messageParent, 'message-error');
@@ -97,6 +97,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener('submit', (event) => {
         event.preventDefault();
+        if (!form.checkValidity()){
+          
+        }
         formValidate();
   
         if (isValid) {
