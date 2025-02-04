@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
           emailError.textContent = 'This field is required';
         } else if (!emailRegex.test(email.value)) {
           showError(emailParent, 'email-error');
-          emailError.textContent = 'Please enter a valid email';
+          emailError.textContent = 'Please enter a valid email address';
         } else {
           hideError(emailParent, 'email-error');
         }

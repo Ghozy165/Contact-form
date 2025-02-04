@@ -181,7 +181,6 @@ button {
 .toast {
     position: fixed;
     top: 5%;
-    /* left: 50%; */
     background-color: var(--grey-900);
     color: var(--white);
     padding: 1.5rem;
